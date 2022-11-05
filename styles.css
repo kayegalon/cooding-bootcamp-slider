@@ -1,0 +1,114 @@
+:root {
+	--colors-dark-blue: 240, 38%, 20%;
+	--colors-grayish-blue: 240, 18%, 77%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+	font-size: 32px;
+	background-image: url("pattern-bg.svg"), url("pattern-curve.svg"), url("pattern-quotes.svg");
+	background-repeat: no-repeat;
+	background-position: 100% 45%, 0% 100%, 15% 25%;
+	overflow: auto;
+}
+
+main {
+	margin: 3rem auto;
+	padding: 3rem 6rem;
+}
+
+.slides {
+	display: flex;
+	align-items: center;
+}
+
+.content {
+	display: none;
+}
+
+.caption {
+	margin-right: -4rem;
+}
+
+.name {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.job-title {
+	color: lightgray;
+}
+
+.image {
+	z-index: -1;
+	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.arrows {
+	position: absolute;
+	right: 30rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	border: 1px solid lightgray;
+	border-radius: 25px;
+	background-color: white;
+	width: 5rem;
+	margin-top: -1.5rem;
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+a {
+	cursor: pointer;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+	body {
+		font-size: 20px;
+		overflow: auto;
+		background-position: 50% 10%, 0% 115%, 50% 63%;
+		background-size: 25rem 25rem, 25rem 12.5rem, 4rem 4rem;
+	}
+	
+	main {
+		padding: 2rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.slides {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+		width: 90%;
+	}
+	
+	.image {
+		width: 90%;
+	}
+	
+	.caption {
+		margin-top: 5rem;
+		text-align: center;
+	}
+	
+	.name {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.arrows {
+		position: absolute;
+		left: 10rem;
+		top: 25rem;
+	}
+}
